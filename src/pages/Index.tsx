@@ -1,13 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useState } from 'react';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import ServicesSection from '../components/ServicesSection';
+import GallerySection from '../components/GallerySection';
+import ProcessSection from '../components/ProcessSection';
+import WhyUsSection from '../components/WhyUsSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import ContactFormSection from '../components/ContactFormSection';
+import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
+import { LanguageProvider } from '../context/LanguageContext';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <LanguageProvider>
+      <div className="min-h-screen bg-white">
+        <Header />
+        <HeroSection />
+        <ServicesSection />
+        <GallerySection />
+        <ProcessSection />
+        <WhyUsSection />
+        <TestimonialsSection />
+        <ContactFormSection />
+        <Footer />
+        <WhatsAppButton />
       </div>
-    </div>
+    </LanguageProvider>
   );
 };
 
